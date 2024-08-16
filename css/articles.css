@@ -1,0 +1,107 @@
+/* Start Articles Section Header */
+.articles-header {
+    background-color: var(--c-stone-100);
+}
+.articles-header .content-articles-container {
+    width: 77%;
+    text-align: center;
+    margin-inline: auto
+}
+@media (max-width: 767px) {
+    .articles-header .content-articles-container {
+        width: 100%
+    }
+}
+.articles-header .content-articles-container h1 {
+    margin-bottom: 30px;
+}
+@media (max-width: 1000px) {
+    .articles-header .content-articles-container h1 {
+        font-size: 42px
+    }
+}
+.articles-header .content-articles-container .drop-down {
+    width: 64px;
+    height: 64px;
+    background-color: var(--c-white);
+    border: var(--border-1-stone-200);
+    box-shadow: var(--shadow-2xl);
+    color: var(--c-black);
+    border-radius: var(--rounded-full);
+    margin: 50px auto 0
+}
+.articles-header .content-articles-container .drop-down > i {
+    font-size: 48px;
+    transition: var(--animation-01s);
+}
+.articles-header .content-articles-container .drop-down:hover > i {
+    color: var(--c-main-emerald-500);
+}
+.articles-header .image-articles-content {
+    margin-top: 100px
+}
+/* End Articles Section Header */
+
+/* Start Articles Content */
+.articles-content .articles-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+}
+.articles-content .art-box {
+    width: calc((100% / 3) - 20px);
+    background-color: var(--c-stone-100);
+    border: var(--border-1-stone-200);
+    border-radius: var(--rounded-xl);
+    position: relative;
+    overflow: hidden
+}
+@media (max-width: 599px) {
+    .articles-content .art-box {
+        width: 100%
+    }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+    .articles-content .art-box {
+        width: calc(50% - 30px)
+    }
+}
+.articles-content .art-box .art-image-box {
+    width: 100%;
+    height: 200px;
+    box-shadow: var(--shadow-2xl);
+    border-bottom: var(--border-1-stone-200)
+}
+.articles-content .art-box .art-image-box > img {
+    width: 100%;
+    height: 100%
+}
+.articles-content .art-box .art-text-box {
+    padding: 25px 25px 100px
+}
+.articles-content .art-box .art-link-box {
+    width: 100%;
+    height: 49px;
+    box-shadow: var(--shadow-2xl);
+    border-top: var(--border-1-stone-200);
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+.articles-content .art-box .art-link-box > a {
+    width: 100%;
+    height: 100%;
+    color: var(--c-black);
+    font-size: 18px;
+    font-weight: 500;
+    transition: var(--animation-01s);
+}
+.articles-content .art-box .art-link-box > a:hover {
+    color: var(--c-main-emerald-500);
+}
+@media (max-width: 767px) {
+    .articles-content .art-box .art-link-box > a {
+        font-size: 15px
+    }
+}
+/* End Articles Content */

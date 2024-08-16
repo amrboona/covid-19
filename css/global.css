@@ -1,0 +1,120 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0
+}
+:root {
+    /* Colors */
+    --c-main-emerald-500: #10b981;
+    --c-white: #FFF;
+    --c-black: #000;
+    --c-stone-100: #f5f5f4;
+    --c-stone-200: #e7e5e4;
+    --c-indigo-100: #e0e7ff;
+    --c-indigo-500: #6366f1;
+    --c-teal-100: #ccfbf1;
+    --c-teal-500: #14b8a6;
+    --c-sky-100: #e0f2fe;
+    --c-sky-500: #0ea5e9;
+    --c-pink-100: #fce7f3;
+    --c-pink-500: #ec4899;
+    --c-orange-100: #ffedd5;
+    --c-orange-500: #f97316;
+    --c-lime-100: #ecfccb;
+    --c-lime-500: #84cc16;
+    --c-articles-bg: #deeaff;
+    --c-contact-bg: #c6b9ff;
+
+    /* Borders */
+    --border-1-stone-200: 1px solid var(--c-stone-200);
+    --border-2-emerald-500-btn: 2px solid var(--c-main-emerald-500);
+
+    /* Outlines */
+    --outline-2-emerald-500-btn: 2px solid var(--c-main-emerald-500);
+
+    /* Borders Radius */
+    --rounded-xl: 12px;
+    --rounded-full: 999.99px;
+    --rounded-circle: 50%;
+
+    /* Shadows */
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+    /* Transitions */
+    --animation-01s: all 0.1s ease;
+    --animation-03s: all 0.3s ease;
+    --animation-05s: all 0.5s ease;
+
+    /* Paddings */
+    --padding-top-96: 96px;
+    --padding-bottom-96: 96px;
+}
+html {
+    scroll-behavior: smooth
+}
+body {
+    padding-top: 96px;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    position: relative;
+    overflow-x: hidden
+}
+img {
+    max-width: 100%
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+i {
+    letter-spacing: 0
+}
+.container {
+    width: 100%;
+    max-width: 1512px;
+    height: 100%;
+    padding-inline: 96px;
+    margin-inline: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.4;
+    font-weight: 600;
+}
+h1 {
+    font-size: clamp(40px, 6vw, 72px);
+}
+h2 {
+    font-size: clamp(32px, 4vw, 48px);
+}
+h3 {
+    font-size: clamp(24px, 3vw, 40px);
+}
+h4 {
+    font-size: clamp(20px, 2vw, 24px);
+}
+h5 {
+    font-size: clamp(16px, 2vw, 20px);
+}
+p {
+    line-height: 1.6;
+    font-size: clamp(17px, 2vw, 20px);
+    font-weight: 500;
+}
+p::first-letter {
+    text-transform: capitalize
+}
+/* Start Media Queries */
+@media (max-width: 767px) {
+    .container {
+        padding-inline: 24px;
+    }
+}

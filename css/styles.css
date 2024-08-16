@@ -1,0 +1,508 @@
+/* Start Hero */
+.hero {
+    min-height: 120vh;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--c-white);
+    position: relative;
+    z-index: 21;
+}
+.hero::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
+}
+.hero .hero-text-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -8;
+}
+.hero .hero-text-container .container {
+    display: flex;
+    align-items: center;
+}
+.hero .hero-text-container .hero-content {
+    width: 65%;
+    text-align: center;
+    margin-inline: auto;
+}
+.hero .hero-text-container .hero-content h1 {
+    margin-bottom: 30px;
+}
+.hero .hero-text-container .hero-content .hero-search {
+    width: 100%;
+    height: 62px;
+    color: #000;
+    margin-top: 40px;
+}
+.hero .hero-text-container .hero-content .get-started {
+    margin: 40px auto 25px;
+}
+.hero .thero-text-container .hero-content > span {
+    line-height: 1.1em;
+    font-size: 17px;
+    font-weight: 500;
+}
+/* Start Media Queries */
+@media (max-width: 500px) {
+    .hero {
+        background-image: none;
+        color: #000
+    }
+    .hero::after {
+        display: none
+    }
+    .hero .hero-text-container .hero-content .get-started {
+        width: 100%;
+        height: 48px;
+    }
+}
+@media (max-width: 767px) {
+    .hero .hero-text-container .hero-content {
+        width: 100%
+    }
+}
+@media (min-width: 1200px) {
+    .hero .hero-text-container .hero-content .hero-search {
+        display: none
+    }
+}
+/* End Hero */
+
+/* Start Health Org */
+.health-org {
+    background-color: var(--c-stone-100);
+}
+.health-org .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px
+}
+.health-org .slogan-box {
+    width: 250px
+}
+.health-org .slogan-box > img {
+    width: 100%
+}
+/* End Health Org */
+
+/* Start About */
+.about .info-container {
+    display: flex;display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+.about .info-container .box {
+    border-radius: var(--rounded-xl);
+    padding: 24px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.about .info-container .box:nth-child(1) {
+    background-color: var(--c-orange-100);
+    border: 1px solid var(--c-orange-500);
+}
+.about .info-container .box:nth-child(2) {
+    background-color: var(--c-teal-100);
+    border: 1px solid var(--c-teal-500);
+}
+.about .info-container .box:nth-child(3) {
+    background-color: var(--c-sky-100);
+    border: 1px solid var(--c-sky-500);
+}
+.about .info-container .box:nth-child(4) {
+    background-color: var(--c-pink-100);
+    border: 1px solid var(--c-pink-500);
+}
+.about .info-container .box .main-content .icon-box-container {
+    width: fit-content;
+    margin-inline: auto;
+}
+.about .info-container .box .main-content .icon-box-container i {
+    font-size: 72px;
+}
+.about .info-container .box:nth-child(1) .main-content .icon-box-container i {
+    color: var(--c-orange-500);
+}
+.about .info-container .box:nth-child(2) .main-content .icon-box-container i {
+    color: var(--c-teal-500);
+}
+.about .info-container .box:nth-child(3) .main-content .icon-box-container i {
+    color: var(--c-sky-500);
+}
+.about .info-container .box:nth-child(4) .main-content .icon-box-container i {
+    color: var(--c-pink-500);
+}
+.about .info-container .box .main-content .text-container {
+    text-align: center;
+    margin-top: 24px
+}
+.about .info-container .box .main-content .text-container p {
+    font-size: 16px;
+    margin-top: 24px;
+}
+.about .info-container .box .number-box {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-bottom-left-radius: var(--rounded-xl);
+}
+.about .info-container .box:nth-child(1) .number-box {
+    background-color: var(--c-orange-500);
+}
+.about .info-container .box:nth-child(2) .number-box {
+    background-color: var(--c-teal-500);
+}
+.about .info-container .box:nth-child(3) .number-box {
+    background-color: var(--c-sky-500);
+}
+.about .info-container .box:nth-child(4) .number-box {
+    background-color: var(--c-pink-500);
+}
+.about .info-container .box .number-box > span {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700
+}
+/* End About */
+
+/* Start Accordion */
+.accordion .main-accordion-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 100px
+}
+.accordion .main-accordion-content .questions-box,
+.accordion .main-accordion-content .image-accordion-container {
+    width: calc(50% - 50px)
+}
+.accordion .main-accordion-content .questions-box {
+    display: grid;
+    gap: 24px;
+}
+.accordion .main-accordion-content .questions-box .box {
+    border: var(--border-1-stone-200);
+    border-radius: var(--rounded-xl);
+    overflow: hidden;
+}
+.accordion .main-accordion-content .questions-box .box input {
+    display: none
+}
+.accordion .main-accordion-content .questions-box .box label {
+    width: 100%;
+    background-color: var(--c-stone-100);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+}
+.accordion .main-accordion-content .questions-box .box label > span {
+    line-height: 1.4;
+    font-size: 20px;
+    font-weight: 600
+}
+.accordion .main-accordion-content .questions-box .box label .nav-box {
+    width: 48px;
+    height: 48px;
+    background-color: #FFF;
+    border-radius: var(--rounded-xl);
+    box-shadow: var(--shadow-2xl);
+    border: var(--border-1-stone-200);
+}
+.accordion .main-accordion-content .questions-box .box label .nav-box > i {
+    font-size: 24px
+}
+.accordion .main-accordion-content .questions-box .box .answer-box {
+    max-height: 0;
+    overflow: hidden
+}
+.accordion .main-accordion-content .questions-box .box input:checked ~ .answer-box {
+    max-height: 1000px
+}
+.accordion .main-accordion-content .questions-box .box .answer-box > span {
+    line-height: 1.6;
+    border-left: var(--border-1-stone-200);
+    border-right: var(--border-1-stone-200);
+    border-bottom: var(--border-1-stone-200);
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    display: block
+}
+@media (max-width: 490px) {
+    .accordion .main-accordion-content .questions-box .box label .nav-box {
+        display: none
+    }
+}
+@media (max-width: 500px) {
+    .accordion .main-accordion-content .questions-box .box label > span {
+        font-size: 18px;
+        font-weight: 500
+    }
+}
+@media (max-width: 767px) {
+    .accordion .main-accordion-content .questions-box .box .answer-box > span {
+        font-size: 15px
+    }
+}
+@media (max-width: 991px) {
+    .accordion .main-accordion-content .questions-box,
+    .accordion .main-accordion-content .image-accordion-container {
+        width: 100%
+    }
+}
+/* End Accordion */
+
+/* Start Article */
+.article {
+    background-color: var(--c-articles-bg);
+}
+.article .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    align-items: center;
+    gap: 96px
+}
+.article .text-article-container {
+    display: grid;
+    gap: 24px;
+}
+/* Start Media Queries */
+@media (max-width: 500px)  {
+    .article .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+/* End Article */
+
+/* Start Services */
+.services .serv-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+}
+.services .serv-box-container .big {
+    width: calc(44% - 20px)
+}
+.services .serv-box-container .small {
+    width: calc(28% - 20px)
+}
+.services .serv-box-container .serv-box {
+    background-color: var(--c-stone-100);
+    border: var(--border-1-stone-200);
+    border-radius: var(--rounded-xl);
+    padding: 24px;
+    cursor: pointer;
+}
+.services .serv-box-container .serv-box:hover:nth-child(1) {
+    background-image: linear-gradient(45deg, #ffebec 40%, rgb(239, 255, 247))
+}
+.services .serv-box-container .serv-box:hover:nth-child(2) {
+    background-image: linear-gradient(45deg, #fff8dd 40%, #ddfff1)
+}
+.services .serv-box-container .serv-box:hover:nth-child(3) {
+    background-image: linear-gradient(45deg, #e9ffe8 40%, #e8f0ff)
+}
+.services .serv-box-container .serv-box:hover:nth-child(4) {
+    background-image: linear-gradient(45deg, #dfe7ff 40%, #dffff0)
+}
+.services .serv-box-container .serv-box:hover:nth-child(5) {
+    background-image: linear-gradient(45deg, #e4feff 40%, #fcffe4)
+}
+.services .serv-box-container .serv-box:hover:nth-child(6) {
+    background-image: linear-gradient(45deg, #ffdffb 40%, #ffdfdf)
+}
+.services .serv-box-container .serv-box .icon-box {
+    font-size: 48px;
+}
+.services .serv-box-container .serv-box:nth-child(1) .icon-box i {
+    color: var(--c-orange-500);
+}
+.services .serv-box-container .serv-box:nth-child(2) .icon-box i {
+    color: var(--c-teal-500);
+}
+.services .serv-box-container .serv-box:nth-child(3) .icon-box i {
+    color: var(--c-sky-500);
+}
+.services .serv-box-container .serv-box:nth-child(4) .icon-box i {
+    color: var(--c-pink-500);
+}
+.services .serv-box-container .serv-box:nth-child(5) .icon-box i {
+    color: var(--c-lime-500);
+}
+.services .serv-box-container .serv-box:nth-child(6) .icon-box i {
+    color: var(--c-indigo-500);
+}
+.services .serv-box-container .serv-box .text-box-container p {
+    font-size: 17px
+}
+@media (max-width: 767px) {
+    .services .serv-box-container .big,
+    .services .serv-box-container .small {
+        width: 100%
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .services .serv-box-container .big,
+    .services .serv-box-container .small {
+        width: calc(50% - 30px)
+    }
+}
+@media (max-width: 991px) {
+    .services .serv-box-container .serv-box .icon-box {
+        margin-inline: auto
+    }
+    .services .serv-box-container .serv-box .text-box-container {
+        text-align: center
+    }
+}
+/* End Services */
+
+/* Start contact */
+.contact {
+    background-color: rgb(198, 185, 255)
+}
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 100px
+}
+.contact .text-contact-container,
+.contact .image-contact-container {
+    width: calc(50% - 50px)
+}
+.contact .text-contact-container .find-contact {
+    width: 260px;
+    margin-top: 40px;
+    gap: 10px
+}
+.contact .text-contact-container .find-contact > i {
+    font-size: 20px
+}
+@media (max-width: 500px) {
+    .contact .text-contact-container .find-contact {
+        width: 100%
+    }
+}
+@media (max-width: 991px) {
+    .contact .text-contact-container,
+    .contact .image-contact-container {
+        width: 100%
+    }
+}
+/* End contact */
+
+/* Start Register */
+.register-form {
+    border: var(--border-1-stone-200);
+    border-radius: var(--rounded-xl);
+    background-color: var(--c-stone-100);
+}
+.register-form > div {
+    border-bottom: var(--border-1-stone-200);
+    padding: 48px
+}
+.register-form > div:last-child {
+    border-bottom: 0
+}
+.register-form .form-header {
+    text-align: center
+}
+.register-form .form-header > span {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700
+}
+.register-form .heading {
+    margin-bottom: 30px
+}
+.register-form .all-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+}
+.register-form .all-content .three-width {
+    width: calc((100% / 3) - 20px);
+}
+.register-form .all-content .two-width {
+    width: calc(50% - 15px);
+}
+.register-form .all-content input {
+    background-color: var(--c-white);
+    border: var(--border-1-stone-200);
+    border-radius: var(--rounded-xl);
+    padding: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: var(--shadow-2xl);
+}
+.register-form .all-content > div {
+    gap: 10px
+}
+.register-form .all-content > div > input {
+    width: 20px;
+    height: 20px
+}
+.register-form .all-content > div > label {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600
+}
+.register-form .submit-and-reset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px
+}
+.register-form .submit-and-reset > input {
+    width: 200px;
+    height: 49px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer
+}
+.register-form .submit-and-reset .reset {
+    background-color: rgb(37, 37, 37);
+    color: var(--c-white);
+    border-color: rgb(37, 37, 37)
+}
+.register-form .submit-and-reset .reset:hover {
+    background-color: rgb(56, 56, 56)
+}
+@media (max-width: 500px) {
+    .register-form .all-content input {
+        font-size: 13px;
+        font-weight: 400
+    }
+}
+@media (max-width: 767px) {
+    .register-form > div {
+        padding: 48px 24px
+    }
+    .register-form .all-content .two-width,
+    .register-form .all-content .three-width {
+        width: 100%
+    }
+}
+/* End Register */
